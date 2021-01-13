@@ -66,7 +66,7 @@ class PictureOfTheDayFragment : Fragment() {
                 } else {
                     tv_bottom_sheet_description_header.text = serverResponseData.title
                     tv_bottom_sheet_description.text = serverResponseData.explanation
-                    image_view.load(url) {
+                    iv_photo_of_day.load(url) {
                         lifecycle(viewLifecycleOwner)
                         error(R.drawable.ic_load_error_vector)
                         placeholder(R.drawable.ic_no_photo_vector)

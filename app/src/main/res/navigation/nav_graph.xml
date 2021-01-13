@@ -8,14 +8,5 @@
     <fragment
         android:id="@+id/pictureOfTheDayFragment"
         android:name="ru.shumilova.mynasaapp.screens.PictureOfTheDayFragment"
-        android:label="PictureOfTheDayFragment" >
-        <action
-            android:id="@+id/action_pictureOfTheDayFragment_to_wikiFragment"
-            app:destination="@id/wikiFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/wikiFragment"
-        android:name="ru.shumilova.mynasaapp.WikiFragment"
-        android:label="fragment_wiki"
-        tools:layout="@layout/fragment_wiki" />
+        android:label="PictureOfTheDayFragment" />
 </navigation>

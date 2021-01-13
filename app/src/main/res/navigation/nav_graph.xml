@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pictureOfTheDayFragment">
+
+    <fragment
+        android:id="@+id/pictureOfTheDayFragment"
+        android:name="ru.shumilova.mynasaapp.screens.PictureOfTheDayFragment"
+        android:label="PictureOfTheDayFragment" >
+        <action
+            android:id="@+id/action_pictureOfTheDayFragment_to_wikiFragment"
+            app:destination="@id/wikiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wikiFragment"
+        android:name="ru.shumilova.mynasaapp.WikiFragment"
+        android:label="fragment_wiki"
+        tools:layout="@layout/fragment_wiki" />
+</navigation>

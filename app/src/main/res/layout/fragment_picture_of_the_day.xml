@@ -8,13 +8,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp">
+        android:layout_height="match_parent">
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/iv_settings_button"
+           android:layout_width="52dp"
+           android:layout_height="52dp"
+           app:srcCompat="@drawable/ic_settings"
+           app:layout_constraintStart_toEndOf="@+id/til_search_container"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintVertical_bias="0.3"
+           android:layout_marginStart="@dimen/base_margin"
+           app:layout_constraintTop_toTopOf="@id/til_search_container"
+           app:layout_constraintBottom_toBottomOf="@id/til_search_container"
+           />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_search_container"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/SearchStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/search_wiki"
@@ -25,7 +36,7 @@
             app:endIconMode="custom"
             app:helperText="@string/wiki_helper_text"
             app:layout_constraintBottom_toTopOf="@+id/iv_photo_of_day"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_settings_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -34,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
+                style="@style/SearchInputStyle"
                 android:maxLength="20"/>
         </com.google.android.material.textfield.TextInputLayout>
 
